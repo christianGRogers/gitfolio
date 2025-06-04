@@ -44,7 +44,7 @@ program
 program
   .command("run")
   .description("Run build files")
-  .option("-p, --port [port]", "provide a port for localhost, default is 3000")
+  .option("-p, --port [port]", "provide a port for localhost, default is 4000")
   .action(runCommand);
 
 program.on("command:*", () => {

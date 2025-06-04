@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose port (change if your app uses a different port)
-EXPOSE 3000
+EXPOSE 4000
 
 # Default command (adjust if your app uses a different entry point)
 CMD ["node", "build.js"]
