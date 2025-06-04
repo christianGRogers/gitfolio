@@ -16,5 +16,5 @@ COPY . .
 # Expose port
 EXPOSE 4000
 
-# Run build.js first, then start the server with run.js
-CMD ["node", "run.js"]
+# Build and run the application
+CMD gitfolio build christianGRogers && gitfolio run -p 4000
