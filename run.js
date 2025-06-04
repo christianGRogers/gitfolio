@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static(`${outDir}`));
 
 function runCommand(program) {
-  let port = program.port ? program.port : 3000;
+  let port = program.port ? program.port : 4000;
 
   app.get("/", function(req, res) {
     res.sendFile("/index.html");

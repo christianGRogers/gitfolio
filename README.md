@@ -39,7 +39,7 @@ gitfolio build <username>
 
 `<username>` is your username on github. This will build your website using your GitHub username and put it in the `/dist` folder.
 
-To run your website use `run` command, Default port is 3000
+To run your website use `run` command, Default port is 4000
 
 ```sh
 gitfolio run -p [port]

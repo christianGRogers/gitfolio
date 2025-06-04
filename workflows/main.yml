@@ -44,4 +44,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
             docker stop gitfolio || true
             docker rm gitfolio || true
-            docker run -d --name gitfolio -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
+            docker run -d --name gitfolio -p 4000:4000 ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
