@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Run build.js first, then start the server with run.js
-CMD node build.js && node run.js
+CMD ["sh", "-c", "node build.js && node run.js"]
