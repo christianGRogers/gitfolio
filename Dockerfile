@@ -13,8 +13,8 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
-# Expose port (change if your app uses a different port)
+# Expose port
 EXPOSE 4000
 
-# Default command (adjust if your app uses a different entry point)
-CMD ["node", "run.js"]
+# Run build.js first, then start the server with run.js
+CMD node build.js && node run.js
