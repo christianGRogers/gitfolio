@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Default command (adjust if your app uses a different entry point)
-CMD ["node", "build.js"]
+CMD ["node", "run.js"]
