@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Build and run the application
-CMD ["sh", "-c", "npm i gitfolio -g && gitfolio build christianGRogers && gitfolio run -p 4000"]
+CMD ["sh", "-c", "npm i gitfolio -g && gitfolio build christianGRogers --sort created --order desc --background 'https://www.pixeoapp.com/wp-content/uploads/2022/02/barrie-spirit-catcher-photo-by-shawn-m-kent.jpg' && gitfolio run -p 4000"]
