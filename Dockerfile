@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Build and run the application
-CMD ["sh", "-c", "npm i gitfolio -g && gitfolio build christianGRogers --sort pushed --order desc --theme dark --background 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pixeoapp.com%2Fphoto-spots%2Fnorth-america%2Fcanada%2Fontario%2Fbarrie-spirit-catcher%2F&psig=AOvVaw1uvIiCFbfLqP-CM4diV5-r&ust=1749172249414000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiMmcqM2Y0DFQAAAAAdAAAAABAE' && gitfolio run -p 4000"]
+CMD ["sh", "-c", "npm i gitfolio -g && gitfolio build christianGRogers --sort pushed --order desc --theme dark --background 'https://www.pixeoapp.com/wp-content/uploads/2022/02/barrie-spirit-catcher-photo-by-shawn-m-kent.jpg' && gitfolio run -p 4000"]
