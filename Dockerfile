@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 4000
 
 # Build and run the application
-CMD gitfolio build christianGRogers && gitfolio run -p 4000
+CMD ["sh", "-c", "gitfolio build christianGRogers && gitfolio run -p 4000"]
