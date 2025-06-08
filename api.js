@@ -10,6 +10,16 @@ const got = require("got");
  * @param {'desc' | 'asc'} [opts.order]
  */
 async function getRepos(username, opts = {}) {
+  // Hardcoded list of repos to display
+  const allowedRepos = [
+    "invesalius3",
+    "bradensbay/bradensbay-web-gen",
+    "TAAM",
+    "VoidBeGone/hacktheyvalley9",
+    "UTSC-CSCC01-Software-Engineering-I/term-group-project-c01w25-project-codelingo",
+    "VoidBeGone/TetrisAssembly"
+  ];
+
   let tempRepos;
   let page = 1;
   let repos = [];
@@ -37,6 +47,9 @@ async function getRepos(username, opts = {}) {
     tempRepos = JSON.parse(tempRepos.body);
     repos = repos.concat(tempRepos);
   } while (tempRepos.length == 100);
+
+  // Filter to only include allowedRepos
+  repos = repos.filter(repo => allowedRepos.includes(repo.name));
 
   if (sort == "star") {
     repos = repos.sort(function(a, b) {
