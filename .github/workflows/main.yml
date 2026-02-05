@@ -39,7 +39,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: 23
+          port: 24
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
             docker stop gitfolio || true
