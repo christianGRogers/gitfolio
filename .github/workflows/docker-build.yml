@@ -33,3 +33,20 @@ jobs:
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
           tags: christianrogers/gitfolio:latest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 24
+          script: |
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
+            docker stop gitfolio || true
+            docker rm gitfolio || true
+            docker run -d --name gitfolio -p 4000:4000 ${{ secrets.DOCKERHUB_USERNAME }}/gitfolio:latest
